@@ -1,0 +1,9 @@
+# Firejail profile for anki
+# Description: flexible, intelligent flashcard program
+# This file is overwritten after every install/update
+# Persistent local customizations
+
+ignore apparmor
+# added mpv to enable playing sound
+private-bin mpv
+

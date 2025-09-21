@@ -1,0 +1,9 @@
+ignore ?BROWSER_DISABLE_U2F: nou2f
+ignore ?BROWSER_DISABLE_U2F: private-dev
+
+#nosound
+no3d
+machine-id
+#novideo
+
+restrict-namespaces

@@ -1,0 +1,50 @@
+# Hardened VS code config.
+
+# For some reason private-bin ssh,ssh-add,ssh-agent doesn't help: 
+# VS code still can't do git push. 
+noblacklist /usr/bin/ssh
+noblacklist /usr/bin/ssh-add
+noblacklist /usr/bin/ssh-agent
+
+noblacklist ${HOME}/.virtualenv
+whitelist ${HOME}/.virtualenv
+
+noblacklist ${HOME}/Dev
+whitelist ${HOME}/Dev
+
+noblacklist ${HOME}/Apps
+whitelist ${HOME}/Apps
+
+noblacklist ${HOME}/.config/Electron
+whitelist ${HOME}/.config/Electron
+
+noblacklist ${HOME}/.config/electron*-flag*.conf
+whitelist ${HOME}/.config/electron*-flag*.conf
+
+noblacklist ${HOME}/.config/Code
+whitelist ${HOME}/.config/Code
+
+noblacklist ${HOME}/.vscode
+whitelist ${HOME}/.vscode
+
+noblacklist ${HOME}/.ssh
+whitelist ${HOME}/.ssh
+
+noblacklist /var/lib/snapd/desktop/dconf/profile/user
+whitelist /var/lib/snapd/desktop/dconf/profile/user
+
+#no3d
+novideo
+nosound
+
+private-cache
+private-dev
+private-tmp
+private-bin bash,sh,id,grep,env,dirname,basename,npm,node,npx,which,python,pip,git,ssh,ssh-add,ssh-agent
+private-opt visual-studio-code
+
+caps.drop all
+nonewprivs
+noroot
+protocol unix,inet,inet6,netlink
+seccomp !chroot

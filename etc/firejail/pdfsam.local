@@ -1,0 +1,4 @@
+ignore include disable-common.inc
+ignore include disable-devel.inc
+ignore include disable-exec.inc
+ignore no3d
